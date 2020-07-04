@@ -2,6 +2,7 @@
 // 2、需要了解基本的 flutter 组件及dart 语法
 
 import 'package:flutter/material.dart';
+import 'list.dart';
 
 void main() => runApp(MyApp());
 
@@ -59,9 +60,10 @@ class MyHomePageState extends State<MyHomePage> {
 
               // 点击按钮事件
               onPressed: () {
-                setState(() {
-                  this.msg = 'you click me';
-                });
+                print('点击了');
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return ListPage();
+                }));
               },
               child: Text(
                 'click me',

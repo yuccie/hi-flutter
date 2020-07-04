@@ -3,6 +3,8 @@ buildscript {
     repositories {
         google()
         jcenter()
+        // 解决：Android Studio 运行flutter卡在: Running Gradle task 'assembleDebug'...
+        // 但控制台总是提示错误，startup failed: build file
 //         maven { url 'https://maven.aliyun.com/repository/google' }
 //         maven { url 'https://maven.aliyun.com/repository/jcenter' }
 //         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
@@ -35,3 +37,6 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// android.useAndroidX=true
+// android.enableJetifier=true
